@@ -17,6 +17,9 @@ export default {
   ANONYM_IMAGE_PATH: '/staticImages/anonym.png',
   BASE_URL: `http://${serverIP}:${serverPort}/`,
   ACCESS_TOKEN: 'accessToken',
+  PHONE_NUMBER_NATIONAL: '877',
+  PHONE_NUMBER_REGION: '355',
+  PHONE_NUMBER_CITY: '3585',
   publicURL:
     env === 'production'
       ? `http://${serverIP}:80/images/`

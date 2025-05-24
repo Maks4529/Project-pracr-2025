@@ -6,6 +6,8 @@ import CONSTANTS from '../../constants';
 import { clearUserStore } from '../../store/slices/userSlice';
 import { getUser } from '../../store/slices/userSlice';
 
+const {PHONE_NUMBER_NATIONAL, PHONE_NUMBER_REGION, PHONE_NUMBER_CITY} = CONSTANTS;
+
 class Header extends React.Component {
   componentDidMount () {
     if (!this.props.data) {
@@ -108,9 +110,9 @@ class Header extends React.Component {
         </div>
         <div className={styles.loginSignnUpHeaders}>
           <div className={styles.numberContainer}>
-            <a href="tel:8773553585">
+            <a href={`tel:${PHONE_NUMBER_NATIONAL+PHONE_NUMBER_REGION+PHONE_NUMBER_CITY}`}>
             <img src={`${CONSTANTS.STATIC_IMAGES_PATH}phone.png`} alt='phone' />
-            <span>(877)&nbsp;355-3585</span>
+            <span>({PHONE_NUMBER_NATIONAL})&nbsp;{`${PHONE_NUMBER_REGION}-${PHONE_NUMBER_CITY}`}</span>
             </a>
           </div>
           <div className={styles.userButtonsContainer}>
