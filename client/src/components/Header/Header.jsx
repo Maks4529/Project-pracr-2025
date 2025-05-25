@@ -5,6 +5,7 @@ import styles from './Header.module.sass';
 import CONSTANTS from '../../constants';
 import { clearUserStore } from '../../store/slices/userSlice';
 import { getUser } from '../../store/slices/userSlice';
+import Logo from '../Logo';
 
 const {PHONE_NUMBER_NATIONAL, PHONE_NUMBER_REGION, PHONE_NUMBER_CITY} = CONSTANTS;
 
@@ -120,11 +121,12 @@ class Header extends React.Component {
           </div>
         </div>
         <div className={styles.navContainer}>
-          <img
+          <Logo alt='blue_logo'/>
+          {/* <img
             src={`${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`}
             className={styles.logo}
             alt='blue_logo'
-          />
+          /> */}
           <div className={styles.leftNav}>
             <div className={styles.nav}>
               <ul>
